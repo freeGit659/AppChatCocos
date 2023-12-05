@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "370a8ba4-1de0-493f-96cf-d5372ae9ccf5",
+  "uuid": "bc42096e-c59d-45a5-bbf2-9fd68ca03418",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,10 +9,10 @@
   "packable": true,
   "platformSettings": {},
   "subMetas": {
-    "56Z_2111.w009.n001.51Z.p3.51-ai-brush-removebg-b4zimexk_16": {
+    "ChatBackground": {
       "ver": "1.0.4",
-      "uuid": "ac6d1657-04f9-43c0-ae45-c8907fd722f9",
-      "rawTextureUuid": "370a8ba4-1de0-493f-96cf-d5372ae9ccf5",
+      "uuid": "a90f7fd8-6a57-42d7-9863-d67bd775ac83",
+      "rawTextureUuid": "bc42096e-c59d-45a5-bbf2-9fd68ca03418",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -20,10 +20,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 982,
-      "height": 158,
-      "rawWidth": 982,
-      "rawHeight": 158,
+      "width": 1440,
+      "height": 3120,
+      "rawWidth": 1440,
+      "rawHeight": 3120,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
