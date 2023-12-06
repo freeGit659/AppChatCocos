@@ -23,9 +23,13 @@ cc.Class({
 
     // update (dt) {},
 
+    messageTemp(){
+        this._messageTemp = this.typingBox.string;
+    },
+
     sendMessage(){
         const message = {
-            text: this.typingBox.string,
+            text: this._messageTemp,
             x: 20,
             y: this.scrollViewsContent.content.childrenCount*60 + 40,
             avatar: this.userAvatar.spriteFrame,
@@ -37,6 +41,7 @@ cc.Class({
     },
 
     clearEditBox(){
+        this.messageTemp();
         this.typingBox.string = '';
         this.typingBox.node.getChildByName('TEXT_LABEL').string = '';
         this.typingBox.focus();
