@@ -3,9 +3,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        itemPrefab: cc.Prefab,
-        parentNode: cc.Node,
-        spi: cc.SpriteFrame,
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -18,10 +16,9 @@ cc.Class({
 
     // update (dt) {},
 
-    pushPrefab(){
-        var item = cc.instantiate(this.itemPrefab);
-        this.parentNode.addChild(item);
-        item.y = this.parentNode.childrenCount*(-80) - 40;
-        cc.log(this.spi);
+    pushMessageUp(){
+        this.node.getComponent(cc.ScrollView).content.getChildren().forEach(element => {
+            element.zIndex++;
+        });;
     }
 });
