@@ -10,6 +10,8 @@ cc.Class({
         scrollViewsContent: cc.ScrollView,
 
         userAvatar: cc.Sprite,
+
+        client: cc.Node,
         
 
     },
@@ -19,6 +21,7 @@ cc.Class({
 
     start () {
         this.typingBox.focus();
+        this._client = this.client.getComponent('client');
     },
 
     // update (dt) {},
@@ -34,6 +37,7 @@ cc.Class({
             y: this.scrollViewsContent.content.childrenCount*60 + 40,
             avatar: this.userAvatar.spriteFrame,
         }
+        this._client.sendMessage(message.text);
         this.scrollViewsContent.node.getComponent('scrollviewCtrl').pushMessageUp();
         var newChat = cc.instantiate(this.chatBox);
         newChat.getComponent('chatBox').setMessage(message);
@@ -45,5 +49,12 @@ cc.Class({
         this.typingBox.string = '';
         this.typingBox.node.getChildByName('TEXT_LABEL').string = '';
         this.typingBox.focus();
+    },
+
+    getMessage(message){
+        this.scrollViewsContent.node.getComponent('scrollviewCtrl').pushMessageUp();
+        var newChat = cc.instantiate(this.chatBox);
+        newChat.getComponent('chatBox').setMessage(message);
+        newChat.parent = this.scrollViewsContent.content;
     }
 });
