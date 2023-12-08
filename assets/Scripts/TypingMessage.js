@@ -45,13 +45,15 @@ cc.Class({
         var newChat = cc.instantiate(this.chatBox);
         newChat.getComponent('chatBox').setMessage(message);
         newChat.parent = this.scrollViewsContent.content;
+        this.scrollViewsContent.scrollToBottom(0.1);
+        this.clearEditBox();
+        this.focus();
     },
 
     clearEditBox(){
         this.messageTemp();
         this.typingBox.string = '';
         this.typingBox.node.getChildByName('TEXT_LABEL').string = '';
-        this.typingBox.focus();
     },
 
     getMessage(message){
@@ -59,5 +61,9 @@ cc.Class({
         var newChat = cc.instantiate(this.chatBox);
         newChat.getComponent('chatBox').setMessage(message);
         newChat.parent = this.scrollViewsContent.content;
+    },
+
+    focus(){
+        this.typingBox.focus();
     }
 });

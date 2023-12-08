@@ -23,7 +23,6 @@ cc.Class({
         // var action = cc.scaleTo(0.5, 0 ,0);
         // this.node.parent.runAction(action);
         this.node.parent.active = false;
-        cc.log(this.node.parent);
         //this.node.parent.active = false;
     }
 

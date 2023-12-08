@@ -3,11 +3,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        userName: '',
-        userAvatar: cc.SpriteFrame,
-
-        userAvatarName: String,
-
+        avatar: [cc.SpriteFrame],
     },
 
     // LIFE-CYCLE CALLBACKS:
