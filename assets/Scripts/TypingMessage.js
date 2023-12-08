@@ -35,7 +35,7 @@ cc.Class({
         this.messageTemp();
         const message = {
             text: this._messageTemp,
-            x: 20,
+            x: 140,
             y: this.scrollViewsContent.content.childrenCount*60 + 40,
             avatar: this._userData.avatar,
             userName: this._userData.userName,

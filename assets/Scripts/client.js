@@ -40,7 +40,7 @@ cc.Class({
             cc.log(name1);
             const message = {
                 text: arg.message,
-                x: -20,
+                x: 120,
                 y: this._manager.scrollViewsContent.content.childrenCount*60 + 40,
                 avatar: null,
                 userName: arg.name,
