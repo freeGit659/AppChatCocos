@@ -5,6 +5,8 @@ cc.Class({
         textLabel: cc.Label,
 
         avatar: cc.Sprite,
+
+        nameLabel: cc.Label,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -20,7 +22,12 @@ cc.Class({
     setMessage(message){
         this.avatar.spriteFrame = message.avatar;
         this.textLabel.string = message.text;
+        this.nameLabel.string = message.userName;
         this.node.x = message.x;
+        if(this.node.x < 0) {
+            this.nameLabel.node.x *= -1;
+            this.nameLabel.node.anchor = 0;
+        }
         this.node.y = message.y;
     }
 

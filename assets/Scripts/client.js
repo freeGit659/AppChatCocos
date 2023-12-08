@@ -43,6 +43,7 @@ cc.Class({
                 x: -20,
                 y: this._manager.scrollViewsContent.content.childrenCount*60 + 40,
                 avatar: null,
+                userName: arg.name,
             }
             if(arg.name != name1) {
                 this._manager.getMessage(message);

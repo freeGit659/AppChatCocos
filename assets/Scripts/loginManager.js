@@ -2,11 +2,14 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        avatar: cc.Sprite,
+
         inputName: cc.EditBox,
 
-        mid : cc.Node,
+        mainChat: cc.Node,
 
         userData: cc.Node,
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -20,9 +23,9 @@ cc.Class({
     setUserName(){
         this._userData = this.userData.getComponent('userData');
         this._userData.userName = this.inputName.string;
-        cc.log(this._userData.userName);
+        this._userData.avatar = this.avatar.spriteFrame;
         this.node.parent.active = false;
-        this.mid.active = true;
+        this.mainChat.active = true;
     }
 
     // update (dt) {},

@@ -9,7 +9,7 @@ cc.Class({
 
         scrollViewsContent: cc.ScrollView,
 
-        userAvatar: cc.Sprite,
+        userData: cc.Node,
 
         client: cc.Node,
         
@@ -22,6 +22,7 @@ cc.Class({
     start () {
         this.typingBox.focus();
         this._client = this.client.getComponent('client');
+        this._userData = this.userData.getComponent('userData');
     },
 
     // update (dt) {},
@@ -31,11 +32,13 @@ cc.Class({
     },
 
     sendMessage(){
+        this.messageTemp();
         const message = {
             text: this._messageTemp,
             x: 20,
             y: this.scrollViewsContent.content.childrenCount*60 + 40,
-            avatar: this.userAvatar.spriteFrame,
+            avatar: this._userData.avatar,
+            userName: this._userData.userName,
         }
         this._client.sendMessage(message.text);
         this.scrollViewsContent.node.getComponent('scrollviewCtrl').pushMessageUp();
