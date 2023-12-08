@@ -13,7 +13,7 @@ cc.Class({
     onLoad() {
         this._manager = this.manager.getComponent('TypingMessage');
         this._userData = this.userData.getComponent('userData');
-        this.socket = io('http://172.16.1.45:3000'); // Điều chỉnh URL máy chủ của bạn
+        this.socket = io('https://server-chat-uyqq.onrender.com'); // Điều chỉnh URL máy chủ của bạn
     },
     setupSocketListeners() {
         this.socket.on('connect', () => {
